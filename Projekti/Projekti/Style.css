@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative; 
+   background: linear-gradient( #929191, #7e7d7d);
+   height: 100vh;
+}
+
+.left-bar, .right-bar {
+    position: fixed;
+    width: 100px; 
+    height: 100vh; 
+    background-color: #000000; 
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    animation: fadeIn 2s ease-out;
+    z-index: 1000; 
+}
+
+.left-bar {
+    left: 0; 
+}
+
+.leftlogo{
+    width: 50px;
+    height: auto;
+}
+
+.right-bar {
+    right: 0;
+}
+
+.header-teksti {
+    font-size: 2.5em; 
+    letter-spacing: 2px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+
+header {
+    background: linear-gradient(45deg, #FDBC00, #FFA500);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    color: black;
+    position: relative;
+    z-index: 1000; 
+    animation: fadeIn 1.5s ease-out;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+footer {
+    background-color: #FDBC00; 
+    color: white; 
+    padding: 10px;
+    position: fixed; 
+    bottom: 0;
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    height: 60px; 
+    z-index: 1000;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-out;
+}
+
+.footer-logo-link {
+    display: inline-block; 
+    padding: 0; 
+    margin: 0; 
+    text-decoration: none; 
+}
+
+.footer-logo {
+    max-width: 150px; 
+    height: auto; 
+    display: block; 
+    margin: 0; 
+    padding: 0;
+    background: none; 
+    border: none; 
+}
+
+footer p {
+    margin: 0; 
+    flex-grow: 1; 
+    text-align: center; 
+    font-weight: bold; 
+}
+
+.footerlinkit{
+    font-weight: bold;
+    color: black;
+    display: block;
+    background-color:#FDBC00 ;
+}
+
+.footerlinkit:hover{
+    color: white;
+    background-color: #d6d6d66e;
+}
+
+img {
+    display: block; 
+    margin: 100px auto; 
+    border-radius: 10px;
+    animation: fadeIn 2s ease-out;
+    width: 210px;
+    height: auto;
+}
+
+.info{
+    background-color: #FDBC00;
+    max-width: 550px;
+    height: 70px;
+    color: black;
+    font-family: 'Open Sans';
+    margin: 100px auto;
+    padding-top: 24px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+@media(max-width:768px){
+    .left-bar, .right-bar {
+        display: none;
+        visibility: hidden;
+    }
+    .info{
+        height: 90px;
+    }
+
+    .print-button {
+        font-size: 10px;
+        padding: 10px 20px; 
+        max-width:100px;
+        max-height: 100px;
+        margin: 10px auto;
+    }
+}
+
+a:link{
+    font-family: 'Open Sans';
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    display: block;
+    background-color: #FDBC00;
+    padding: 15px 15px;
+    margin: -80px auto;
+    text-align: center;
+    font-weight: bold;
+    max-width: 210px;
+    max-height: auto;
+    text-decoration: none;
+    animation: fadeIn 2s ease-out;
+}
+
+a:hover{
+    background-color:#fdbe006e;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition-delay: 20ms;
+}
+
+a:visited{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.logo{
+    width: 10px; height: auto; 
+    align-items: center;
+}
+
+.print-button {
+    font-family: 'Open Sans';
+    background-color: #FDBC00;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    display: block;
+}
+
+.print-button:hover {
+    background-color: #d6d6d66e;
+    color: white;
+}
+
+@media print {
+    @page {
+        margin: 0;
+    }
+    body * {
+        visibility: hidden; 
+    }
+    img {
+        visibility: visible;
+        top: 50px;
+        left: 100px;
+        width: 300px;
+        height: auto;
+    }
+}
